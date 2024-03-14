@@ -36,8 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const clickedNumber = parseInt(this.textContent);
             if (bombNumbers.includes(clickedNumber)) { 
                 console.log("Hai cliccato su una bomba. Mi dispiace");
+                alert ("Hai cliccato su una bomba. Mi dispiace")
             } else {
                 console.log("Ti è andata bene...");
+                alert ("Ti è andata bene...")
             }
         });
         container.appendChild(div);
