@@ -30,3 +30,13 @@
     background-color: #FFD23F;
     color: black;
 }
+
+.bg-red {
+    background-color: red;
+    color: white;
+}
+
+.bg-green {
+    background-color: green;
+    color: white;
+}
