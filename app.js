@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
             
             
     // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
-    // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green).           
+    // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
+          
     this.classList.add('clicked'); 
     const clickedNumber = parseInt(this.textContent);
         if (bombNumbers.includes(clickedNumber)) { 
             this.classList.add('bg-red');
-            console.log("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.");
             alert ("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.")
             alert('I numeri che avresti dovuto evitare sono: ' + bombNumbers.join(', ')); //bombNumers ovviamente non è una stringa ma un numero; con .join converto il numero in stringa.
 
@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
         else {
             this.classList.add('bg-green');
             console.log("Ti è andata bene...");
-            alert ("Ti è andata bene...")
             clickCount++; // Incrementa il contatore di clic
             console.log("Numero di clic:", clickCount);
                 
