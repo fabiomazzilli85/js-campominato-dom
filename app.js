@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 
-    // Creo una funzione. Le do nome ''restartGame' con istruzione ''reload'. Inoltre, per rendere visibile il div selezionato con il background color red, ho ritardato l'esecuzione del reload di 3 secondi.   
+    // Creo una funzione. Le do nome ''restartGame' con istruzione ''reload'. Inoltre, per rendere visibile il div selezionato con il background color red e l'elenco dei numeri presenti nell'Arrow, ho ritardato l'esecuzione del reload di 4 secondi.   
     function restartGame() {
         setTimeout(function() {
             location.reload();
-        }, 3000); 
+        }, 4000); 
     }
     
 
@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const clickedNumber = parseInt(this.textContent);
         if (bombNumbers.includes(clickedNumber)) { 
             this.classList.add('bg-red');
-            alert ("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.")
-            alert('I numeri che avresti dovuto evitare sono: ' + bombNumbers.join(', ')); //bombNumers ovviamente non è una stringa ma un numero; con .join converto il numero in stringa.
+            alert ("Hai cliccato su una bomba. In console puoi verificare i numeri su cui non avresti dovuto cliccare.");
+            console.log(bombNumbers)
 
              restartGame(); // Invoco la funzione dichiarata precedentemente. La invoco solo dopo aver visualizzato il messaggio in Alert e in console.log
             } 
