@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Qui lavoro sul bottone.
     // 1. Quando clicco sul bottone, esso rimuove la classe hidden dal mio box che, di conseguenza, risulta visualizzabile (la classe hidden, nel file CSS, ha proprietà Display None). 
-    // 2. Riga 82: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
+    // 2. Riga 79: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
     showButton.addEventListener('click', function() {
         const boxes = document.querySelectorAll('.box');
         boxes.forEach(box => {
