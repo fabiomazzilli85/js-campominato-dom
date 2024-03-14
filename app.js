@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
         bombNumbers.push(bombNumber);
     }
     
-    // Creo una funzione. Le do un nome ''restartGame' le istruzioni ''reload'.
+
+    // Creo una funzione. Le do nome ''restartGame' e istruzioni ''reload'.
     function restartGame() {
         location.reload(); 
     }
@@ -39,25 +40,29 @@ document.addEventListener("DOMContentLoaded", function() {
             // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
             // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
             
-            this.classList.add('clicked'); 
-            const clickedNumber = parseInt(this.textContent);
-            if (bombNumbers.includes(clickedNumber)) { 
-                this.classList.add('bg-red');
-                console.log("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.");
-                alert ("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.")
-                restartGame(); // Invoco la funzione dichiarata precedentemente. La invoco solo dopo aver visualizzato il messaggio in Alert e in console.log
-            } else {
-                this.classList.add('bg-green');
-                console.log("Ti è andata bene...");
-                alert ("Ti è andata bene...")
-                clickCount++; // Incrementa il contatore di clic
-                console.log("Numero di clic:", clickCount);
+    this.classList.add('clicked'); 
+    const clickedNumber = parseInt(this.textContent);
+        if (bombNumbers.includes(clickedNumber)) { 
+            this.classList.add('bg-red');
+            console.log("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.");
+            alert ("Hai cliccato su una bomba. La fortuna è cieca, ma la tua sfiga ci vede benissimo.")
+            alert('I numeri che avresti dovuto evitare sono: ' + bombNumbers.join(', ')); //bombNumers ovviamente non è una stringa ma un numero; con .join converto il numero in stringa.
+
+             restartGame(); // Invoco la funzione dichiarata precedentemente. La invoco solo dopo aver visualizzato il messaggio in Alert e in console.log
+            } 
+        else {
+            this.classList.add('bg-green');
+            console.log("Ti è andata bene...");
+            alert ("Ti è andata bene...")
+            clickCount++; // Incrementa il contatore di clic
+            console.log("Numero di clic:", clickCount);
                 
-                if(clickCount === 5){
-                    alert ('La fortuna non dura tutta la vita, a meno che tu non muoia giovane :-)')
-                }
-                
+            
+        if(clickCount === 5){
+            alert ('La fortuna non dura tutta la vita, a meno che tu non muoia giovane :-)')
+                }    
             }
+     
         });
         container.appendChild(div);
     }
