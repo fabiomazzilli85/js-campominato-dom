@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector('.container'); 
     const showButton = document.getElementById('showButton');
-    let clickCount = 0; // Questo contatore è inizializzato. Sarà utile per sommare e mostrare in console il numero di click fortunati dell'utente.
+    let clickCount = 0; // Questo contatore è inizializzato. Sarà utile per sommare e mostrare in console il numero di click 'fortunati' dell'utente.
 
     
     // Array dei numeri bomba.
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
             location.reload();
         }, 3000); 
     }
-    
     
 
     // Creo un ciclo For.
