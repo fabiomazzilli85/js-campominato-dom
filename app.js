@@ -18,10 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 
-    // Creo una funzione. Le do nome ''restartGame' e istruzioni ''reload'.
+    // Creo una funzione. Le do nome ''restartGame' con istruzione ''reload'. Inoltre, per rendere visibile il div selezionato con il background color red, ho ritardato l'esecuzione del reload di 3 secondi.   
     function restartGame() {
-        location.reload(); 
+        setTimeout(function() {
+            location.reload();
+        }, 3000); 
     }
+    
     
 
     // Creo un ciclo For.
