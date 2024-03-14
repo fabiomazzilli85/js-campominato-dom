@@ -30,7 +30,7 @@ p {
     width: calc(10% - 10px); 
     aspect-ratio: 1/1;
     color: white;
-    background-color: #378CE7;
+    background-color: #124076;
     margin: 5px;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ p {
 }
 
 #showButton {
-    background-color: #378CE7;
+    background-color: #124076;
     color: white;
     padding: 8px 15px;
     border-radius: 25px;
