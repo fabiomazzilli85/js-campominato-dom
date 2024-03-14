@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector('.container'); 
     const showButton = document.getElementById('showButton');
-    let clickCount = 0;
+    let clickCount = 0; // Questo contatore è inizializzato. Sarà utile per sommare e mostrare in console il numero di click fortunati dell'utente.
+
     
     // Array dei numeri bomba.
     // 1. Creo una costante e le do il nome di bombNumber.
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         location.reload(); 
     }
     
+
     // Creo un ciclo For.
     // 1. Creo una variabile che, partendo da 1, si incrementa di 1 fino a che è vera la condizione che la variabile è  <=100.
     // 2. Aggiungo due classi: box e hidden.
@@ -37,9 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             
             
-            // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
-            // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
-            
+    // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
+    // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green).           
     this.classList.add('clicked'); 
     const clickedNumber = parseInt(this.textContent);
         if (bombNumbers.includes(clickedNumber)) { 
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Qui lavoro sul bottone.
     // 1. Quando clicco sul bottone, esso rimuove la classe hidden dal mio box che, di conseguenza, risulta visualizzabile (la classe hidden, nel file CSS, ha proprietà Display None). 
-    // 2. Riga 55: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
+    // 2. Riga 82: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
     showButton.addEventListener('click', function() {
         const boxes = document.querySelectorAll('.box');
         boxes.forEach(box => {
