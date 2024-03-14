@@ -4,8 +4,20 @@ body {
     background-color: #CCD3CA;
 }
 
+.header {
+    background-color: #124076;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+} 
+
 h1 {
     text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
 }
 
 .container {
