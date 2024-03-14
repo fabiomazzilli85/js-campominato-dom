@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const clickedNumber = parseInt(this.textContent);
         if (bombNumbers.includes(clickedNumber)) { 
             this.classList.add('bg-red');
-            alert ("Hai cliccato su una bomba. In console puoi verificare i numeri su cui non avresti dovuto cliccare.");
+            alert ("Hai cliccato su una bomba. Game Over.");
             console.log(bombNumbers)
 
              restartGame(); // Invoco la funzione dichiarata precedentemente. La invoco solo dopo aver visualizzato il messaggio in Alert e in console.log
