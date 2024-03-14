@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } while (bombNumbers.includes(bombNumber)); 
         bombNumbers.push(bombNumber);
     }
-
-
+    
+    
     // Creo un ciclo For.
     // 1. Creo una variabile che, partendo da 1, si incrementa di 1 fino a che è vera la condizione che la variabile è  <=100.
     // 2. Aggiungo due classi: box e hidden.
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 box.classList.remove('clicked'); 
             });
             
-
-     // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
-    // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
-
+            
+            // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
+            // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
+            
             this.classList.add('clicked'); 
             const clickedNumber = parseInt(this.textContent);
             if (bombNumbers.includes(clickedNumber)) { 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(div);
     }
     
-
+    
     // Qui lavoro sul bottone.
     // 1. Quando clicco sul bottone, esso rimuove la classe hidden dal mio box che, di conseguenza, risulta visualizzabile (la classe hidden, nel file CSS, ha proprietà Display None). 
     // 2. Riga 55: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
