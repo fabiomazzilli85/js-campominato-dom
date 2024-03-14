@@ -35,9 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('clicked'); 
             const clickedNumber = parseInt(this.textContent);
             if (bombNumbers.includes(clickedNumber)) { 
+                this.classList.add('bg-red');
                 console.log("Hai cliccato su una bomba. Mi dispiace");
                 alert ("Hai cliccato su una bomba. Mi dispiace")
             } else {
+                this.classList.add('bg-green');
                 console.log("Ti è andata bene...");
                 alert ("Ti è andata bene...")
             }
