@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 
-    // Creo una funzione. Le do nome ''restartGame' con istruzione ''reload'. Inoltre, per rendere visibile il div selezionato con il background color red e l'elenco dei numeri presenti nell'Arrow, ho ritardato l'esecuzione del reload di 4 secondi.   
+    // Creo una funzione. Le do nome ''restartGame' con istruzione ''reload'. Inoltre, per rendere visibile il div selezionato con il background color red e l'elenco dei numeri presenti nell'Arrow, ho ritardato l'esecuzione del reload di 7 secondi.   
     function restartGame() {
         setTimeout(function() {
             location.reload();
-        }, 4000); 
+        }, 7000); 
     }
     
 
