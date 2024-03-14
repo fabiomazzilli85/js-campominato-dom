@@ -2,36 +2,47 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector('.container'); 
     const showButton = document.getElementById('showButton');
     
-    // Creo 100 div che vanno a sostituire il markup HTML.
+
+
     for (let i = 1; i <= 100; i++) {
         const div = document.createElement('div');
-        div.classList.add('box', 'hidden'); // Aggiungo, oltre alla classe `box`, che ha le sue proprietà CSS, la classe 'hidden' per nascondere i div (utile successiivamente).
+        div.classList.add('box', 'hidden');
         div.textContent = i; 
-        div.addEventListener('click', function() { // Qui ho fatto molto copia e incolla ma  la lettura del codice mi pare abbastanza chiara.
+        div.addEventListener('click', function() {
             
             document.querySelectorAll('.box').forEach(box => {
-                box.classList.remove('clicked'); // Qui rimuovo la classe `clicked` a tutti i box.
+                box.classList.remove('clicked'); 
             });
             
-            this.classList.add('clicked'); // Qui, invece, aggiungo la classe agli elementi su cui clicco. ''This'' lo abbiamo visto oggi con Gianliuca.
+            this.classList.add('clicked'); 
             const clickedNumber = parseInt(this.textContent);
-            console.log("Hai cliccato sul div numero:", clickedNumber); // Qui mando in console la frase `Hai cliccaro sul duv numero` e il `clickedNumber`.
+            console.log("Hai cliccato sul div numero:", clickedNumber);
         });
         container.appendChild(div);
     }
     
-    // Aggiungo un listener al bottone.
     showButton.addEventListener('click', function() {
         
         
         const boxes = document.querySelectorAll('.box');
         
-        // Rimuovo la classe 'hidden' per mostrare i div.
+    
         boxes.forEach(box => {
             box.classList.remove('hidden');
         });
         
-        // Nascondo il bottone dopo averci  cliccato.
-        showButton.style.display = 'none';
+            showButton.style.display = 'none';
     });
 });
+
+
+// Ho creato una costante e ho inserito manualmente 16 numeri e ho fatto un console.log.. Ora farò in modo che in numeri siano generati casualmente e commenterò il mio Array. 
+const bombNumber = []
+
+for (let i = 1; i <= 16; i++) {
+    bombNumber.push(Math.floor(Math.random() * 100) + 1);
+ }
+
+ console.log(bombNumber.length);
+
+ // Utilizzando il ciclo Fior ho appena generato un numero compreso tra 1 e 16 e ho eseguito il ''push'' in ''bombNumber', dichiarato precedentemente. '
