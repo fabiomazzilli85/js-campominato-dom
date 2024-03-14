@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Array dei numeri bomba.
     // 1. Creo una costante e le do il nome di bombNumber.
-    // 2. Con il ciclo For incremento di uno la variabile ''i'' fino a che è vera la condizione che ''i'' <= di 16.
+    // 2. Con il ciclo For incremento di uno la variabile ''j'' fino a che è vera la condizione che ''j'' <= di 16.
     // 3. Con includes mi accerto che un numero non si ripeta.
     const bombNumbers = [];
-    for (let i = 1 i <= 16; i++) {
+    for (let j = 1;  j <= 16; j++) {
         let bombNumber;
         do {
             bombNumber = Math.floor(Math.random() * 100) + 1;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(div);
     }
     
-    
+
     // Qui lavoro sul bottone.
     // 1. Quando clicco sul bottone, esso rimuove la classe hidden dal mio box che, di conseguenza, risulta visualizzabile (la classe hidden, nel file CSS, ha proprietà Display None). 
     // 2. Riga 55: dopo aver cliccato sul bottone, lavoro con lo style e lo mando in display none. 
