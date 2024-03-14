@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             
 
-    // // Questa è la parte più importante fino a questo momento. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else
+     // Questa è la parte più importante del progetto. Se il bombNumber è incluso (tramite il metodo includes) nei clickedNumber mando a schermo il messaggio in console.log con la logica dell'if ed else.
+    // A if si aggiunge una classe (bg-red) ad esle se ne aggiunge un'altra (bg-green). 
+
             this.classList.add('clicked'); 
             const clickedNumber = parseInt(this.textContent);
             if (bombNumbers.includes(clickedNumber)) { 
