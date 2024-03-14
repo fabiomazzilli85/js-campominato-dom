@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-    background-color: #124076;
+    background-color: #6196A6;
     color: white;
     padding: 10px;
     margin-bottom: 10px;
@@ -29,8 +29,8 @@ p {
 .box {
     width: calc(10% - 10px); 
     aspect-ratio: 1/1;
-    color: white;
-    background-color: #124076;
+    color: yellow;
+    background-color: black;
     margin: 5px;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ p {
 }
 
 #showButton {
-    background-color: #124076;
+    background-color: #6196A6;
     color: white;
     padding: 8px 15px;
     border-radius: 25px;
